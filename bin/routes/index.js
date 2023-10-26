@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = require('express');
+const router = express.Router();
+const auth = require('./auth/index');
+const map = require('./map/index');
+const gps = require('./gps/index');
+const message = require('./message/index');
+router.use('/auth', auth);
+router.use('/map', map);
+router.use('/gps', gps);
+router.use('/message', message);
+module.exports = router;
+exports.default = {};
